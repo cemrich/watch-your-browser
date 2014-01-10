@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Watch your browser</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">
+		<link rel="stylesheet" href="style.css">
+	</head>
+
+	<body>
+		<h1>Watch your browser</h1>
+		<h2>What can be done with HTML5 and Javascript</h2>
+
+		<ul class="features">
+
+			<li id="notifications">
+				<h3>Notifications</h3>
+				<p>After your approval chrome might show you notifications above your task bar.</p>
+				<button>Try</button>
+			</li>
+
+			<li id="vibration">
+				<h3>Vibration</h3>
+				<p>Yes, your phone might vibrate. Desktop browser might provide the API, but - surprise - won't vibrate.</p>
+				<button>Try</button>
+			</li>
+
+			<li id="battery">
+				<h3>Battery</h3>
+				<p>Firefox can detect your battery status. Try to plug in and out your device to see the changes.</p>
+				<div class="indicator">
+					<div class="inner">no support</div>
+				</div>
+				<p class="time">
+					Time until fully charged: <span class="chargedTime">n/a</span><br>
+					Time until discharged: <span class="dischargedTime">n/a</span>
+				</p>
+			</li>
+
+			<li id="speech">
+				<h3>Speech-Recognition</h3>
+				<p>Chrome can do speech recognition inside the browser after the user has allowed to use the microphone.</p>
+				<button>Try</button>
+				<p class="result"></p>
+			</li>
+
+			<li id="rotation" class="disabled">
+				<h3>Rotation</h3>
+				<p>TBD</p>
+			</li>
+
+			<li id="acceleration" class="disabled">
+				<h3>Acceleration</h3>
+				<p>TBD</p>
+			</li>
+
+			<li id="compass" class="disabled">
+				<h3>Compass</h3>
+				<p>TBD</p>
+			</li>
+
+			<li id="fullscreen" class="disabled">
+				<h3>Fullscreen</h3>
+				<p>TBD</p>
+			</li>
+
+			<li id="sound-analysis" class="disabled">
+				<h3>Sound-Analysis</h3>
+				<p>TBD</p>
+			</li>
+
+			<li id="video-analysis" class="disabled">
+				<h3>Video-Analysis</h3>
+				<p>TBD</p>
+			</li>
+
+			<li id="midi" class="disabled">
+				<h3>Midi</h3>
+				<p>TBD</p>
+			</li>
+
+			<li id="sound-generation" class="disabled">
+				<h3>Sound-Generation</h3>
+				<p>TBD</p>
+			</li>
+
+		</ul>
+	</body>
+
+	<script data-main="/js/index.js"  src="/js/lib/require.js"></script>
+
+</html>

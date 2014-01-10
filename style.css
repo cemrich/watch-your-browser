@@ -1,0 +1,89 @@
+html {
+	font-family: sans-serif;
+}
+body {
+	padding: 0 1em;
+	max-width: 500px;
+	margin: auto;
+	border: 1px solid #cccccc;
+}
+button {
+	color: #2385BC;
+	font-weight: bold;
+	padding: 0.2em 0.7em;
+}
+.features {
+	list-style-type: none;
+	list-style-position: outside;
+	padding: 0;
+}
+.features li {
+	margin: 0 -1em;
+	padding: 1em;
+	border-top: 1px solid #cccccc;
+	clear: both;
+	border-left: 5px solid white;
+}
+.features li.supported {
+	border-left-color: green;
+}
+.features li:not(.supported) {
+	border-left-color: red;
+}
+.features li.disabled {
+	opacity: 0.4;
+	border-left-color: white;
+}
+.features li:nth-child(odd) {
+	background-color: #eeeeee;
+}
+.features li:nth-child(even) {
+	background-color: #dddddd;
+}
+.features li h3 {
+	color: #2385bc;
+}
+.features li img {
+	width: 170px;
+	max-height: 140px;
+	float: left;
+}
+
+#battery .indicator {
+	width: 70px;
+	height: 100px;
+	border: 2px solid #2385BC;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	line-height: 140%;
+	overflow: hidden;
+	float: left;
+}
+#battery .indicator .inner {
+	width: 70px;
+	height: 100px;
+	background-color: white;
+	background-image: repeating-linear-gradient(-45deg,
+		rgba(35,133,188,.8),
+		rgba(35,133,188,.8) 10px,
+		rgba(35,133,188,1) 10px,
+		rgba(35,133,188,1) 20px);
+	position: relative;
+	top: 0;
+	border-top: 2px solid #2385BC;
+	margin-top: -2px;
+}
+#battery .time {
+	height: 100px;
+	margin-left: 100px; 
+}
+#battery .time .chargedTime,
+#battery .time .dischargedTime {
+	font-weight: bold;
+}
+
+#speech .result::before {
+	content: 'Result: ';
+	font-weight: bold;
+}
