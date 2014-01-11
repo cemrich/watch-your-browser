@@ -30,6 +30,10 @@ button {
 .features li:not(.supported) {
 	border-left-color: red;
 }
+.features li:not(.supported) button {
+	pointer-events: none;
+	opacity: 0.5;
+}
 .features li.disabled {
 	opacity: 0.4;
 	border-left-color: white;
@@ -86,4 +90,9 @@ button {
 #speech .result::before {
 	content: 'Result: ';
 	font-weight: bold;
+}
+
+*|*:fullscreen {
+	position:fixed;
+	top:0; right:0; bottom:0; left:0;
 }
