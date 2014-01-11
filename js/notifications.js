@@ -20,20 +20,15 @@ define(function (require, exports, module) {
 		}, 1000);
 	}
 
-	var tryButton = document.querySelector('#notifications button');
-	tryButton.addEventListener('click', function() {
-		if (exports.isSupported()) {
-			if (window.webkitNotifications.checkPermission() === 0) { 
-				// allowed
-				showNotification();
-			} else {
-				window.webkitNotifications.requestPermission(function () {
-					showNotification();
-				});
-			}
+	exports.onTryClick = function() {
+		if (window.webkitNotifications.checkPermission() === 0) { 
+			// allowed
+			showNotification();
 		} else {
-			alert('not supported');
+			window.webkitNotifications.requestPermission(function () {
+				showNotification();
+			});
 		}
-	}, false);
+	};
 
 });

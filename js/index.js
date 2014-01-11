@@ -13,8 +13,12 @@ define(function (require, exports, module) {
 			var feature = featureNames[i];
 			var module = arguments[i];
 			var node = items[i];
+			var tryButton = document.querySelector('#' + feature + ' .try');
 			if (module.isSupported()) {
 				node.classList.add('supported');
+				if (tryButton) {
+					tryButton.addEventListener('click', module.onTryClick, false);
+				}
 			}
 		}
 	});

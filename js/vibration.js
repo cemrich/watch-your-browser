@@ -11,13 +11,8 @@ define(function (require, exports, module) {
 		navigator.mozVibrate ||
 		navigator.msVibrate;
 
-	var tryButton = document.querySelector('#vibration button');
-	tryButton.addEventListener('click', function() {
-		if (exports.isSupported()) {
-			navigator.vibrate([200, 40, 40, 40, 20, 40, 100]);
-		} else {
-			alert('not supported');
-		}
-	}, false);
+	exports.onTryClick = function() {
+		navigator.vibrate([200, 40, 40, 40, 20, 40, 100]);
+	};
 
 });

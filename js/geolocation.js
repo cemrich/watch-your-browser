@@ -13,19 +13,12 @@ define(function (require, exports, module) {
 		}
 	}
 	
-	var tryButton = document.querySelector('#geolocation button');
-	tryButton.addEventListener('click', function() {
-
-		if (exports.isSupported()) {
-			result.innerHTML = 'please wait...';
-			var watchID = navigator.geolocation.watchPosition(updateLocation, function () {
-				result.innerHTML = '';
-				alert('unable to receive location');
-			});
-		} else {
-			alert('not supported');
-		}
-	
-	});
+	exports.onTryClick = function() {
+		result.innerHTML = 'please wait...';
+		var watchID = navigator.geolocation.watchPosition(updateLocation, function () {
+			result.innerHTML = '';
+			alert('unable to receive location');
+		});
+	};
 
 });
