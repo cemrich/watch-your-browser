@@ -92,6 +92,12 @@ button {
 	font-weight: bold;
 }
 
+#sound-analysis canvas {
+	border: 2px solid #2385BC;
+	margin: -2px;
+	max-width: 100%;
+}
+
 *|*:fullscreen {
 	position:fixed;
 	top:0; right:0; bottom:0; left:0;
