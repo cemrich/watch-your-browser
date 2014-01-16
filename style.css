@@ -94,8 +94,19 @@ button {
 
 #sound-analysis canvas {
 	border: 2px solid #2385BC;
-	margin: -2px;
+	margin: 0 -2px;
 	max-width: 100%;
+}
+
+#video-analysis canvas {
+	display: none;
+}
+
+#video-analysis video {
+	border: 8px solid white;
+	margin: 0 -8px;
+	background-color: white;
+	width: 100%;
 }
 
 *|*:fullscreen {
