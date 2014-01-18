@@ -5,7 +5,7 @@ define(function (require, exports, module) {
 	};
 
 	// SPEECH RECOGNITION
-	var result = document.querySelector('#speech .result');
+	var result = document.querySelector('#speech-recognition .result');
 	exports.onTryClick = function() {
 		var recognition = new webkitSpeechRecognition();
 		result.innerHTML = '-';
