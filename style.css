@@ -109,6 +109,24 @@ button {
 	width: 100%;
 }
 
+#speech-synthesis input {
+	width: 100%;
+	padding: 0.2em;
+	border: 2px solid #cccccc;
+}
+
+#speech-synthesis input.start {
+	border-color: #2385BC;
+}
+
+#speech-synthesis input.end {
+	border-color: #cccccc;
+}
+
+#speech-synthesis input.error {
+	border-color: red;
+}
+
 *|*:fullscreen {
 	position:fixed;
 	top:0; right:0; bottom:0; left:0;
