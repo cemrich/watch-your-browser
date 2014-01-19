@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
 
 	exports.isSupported = function () {
-		return 'webkitNotifications' in window;
+		return 'Notification' in window;
 	};
 
 	// NOTIFICATION
@@ -9,11 +9,10 @@ define(function (require, exports, module) {
 		var counter = 0;
 		var interval = setInterval(function () {
 			counter++;
-			var notification = window.webkitNotifications.createNotification(
-				'img/ps_bg_middle.jpg',
-				'Notification Title ' + counter,
-				'Notification content...');
-			notification.show();
+			var notification = new Notification(
+				'Notification Title ' + counter, {
+				icon: 'img/ps_bg_middle.jpg', 
+				body: 'Notification content...' });
 			if (counter >= 3) {
 				clearInterval(interval);
 			}
@@ -21,14 +20,9 @@ define(function (require, exports, module) {
 	}
 
 	exports.onTryClick = function() {
-		if (window.webkitNotifications.checkPermission() === 0) { 
-			// allowed
+		window.Notification.requestPermission(function () {
 			showNotification();
-		} else {
-			window.webkitNotifications.requestPermission(function () {
-				showNotification();
-			});
-		}
+		});
 	};
 
 });
