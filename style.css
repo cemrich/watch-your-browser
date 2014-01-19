@@ -150,6 +150,10 @@ button {
 	transform-style: preserve-3d;
 }
 
+#acceleration canvas {
+	max-width: 100%;
+}
+
 *|*:fullscreen {
 	position:fixed;
 	top:0; right:0; bottom:0; left:0;
