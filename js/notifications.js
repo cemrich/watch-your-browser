@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
 
 	exports.isSupported = function () {
-		return window.webkitNotifications;
+		return 'webkitNotifications' in window;
 	};
 
 	// NOTIFICATION

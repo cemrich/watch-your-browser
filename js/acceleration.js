@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
 
 	exports.isSupported = function () {
-		return DeviceOrientationEvent;
+		return 'DeviceOrientationEvent' in window;;
 	};
 
 	var canvas = document.querySelector('#acceleration canvas');

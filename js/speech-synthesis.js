@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
 
 	exports.isSupported = function () {
-		return window.speechSynthesis;
+		return 'speechSynthesis' in window;
 	};
 
 

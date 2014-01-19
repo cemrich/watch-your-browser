@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
 
 	exports.isSupported = function () {
-		return navigator.battery;
+		return 'battery' in navigator;
 	};
 
 	// BATTERY

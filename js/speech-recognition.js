@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
 
 	exports.isSupported = function () {
-		return window.webkitSpeechRecognition;
+		return 'webkitSpeechRecognition' in window;
 	};
 
 	// SPEECH RECOGNITION

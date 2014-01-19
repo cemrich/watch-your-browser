@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
 
 	exports.isSupported = function () {
-		return navigator.requestMIDIAccess;
+		return 'requestMIDIAccess' in navigator;
 	};
 
 	// MIDI
