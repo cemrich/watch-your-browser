@@ -26,18 +26,21 @@
 
 			<li id="notifications">
 				<h3>Notifications</h3>
+				<a class="icon spec" href="http://www.w3.org/TR/notifications/"></a>
 				<p>After your approval chrome might show you notifications above your task bar.</p>
 				<button class='try'>Try</button>
 			</li>
 
 			<li id="vibration">
 				<h3>Vibration</h3>
+				<a class="icon spec" href="http://www.w3.org/TR/vibration/"></a>
 				<p>Yes, your phone might vibrate. Desktop browser might provide the API, but - surprise - won't vibrate.</p>
 				<button class='try'>Try</button>
 			</li>
 
 			<li id="battery">
 				<h3>Battery</h3>
+				<a class="icon spec" href="http://www.w3.org/TR/battery-status/"></a>
 				<p>Firefox can detect your battery status. Try to plug in and out your device to see the changes.</p>
 				<div class="indicator">
 					<div class="inner">no support</div>
@@ -50,6 +53,7 @@
 
 			<li id="speech-recognition">
 				<h3>Speech-Recognition</h3>
+				<a class="icon spec" href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html"></a>
 				<p>Chrome can do speech recognition inside the browser after the user has allowed to use the microphone.</p>
 				<button class='try'>Try</button>
 				<p class="result"></p>
@@ -57,6 +61,7 @@
 
 			<li id="speech-synthesis">
 				<h3>Speech-Synthesis</h3>
+				<a class="icon spec" href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html"></a>
 				<p>Few browser are able to synthesize text to speech and read it out to you.</p>
 				<input type="text" value="Hello, how are you?">
 				<button class='try'>Try</button>
@@ -64,6 +69,7 @@
 
 			<li id="rotation">
 				<h3>Rotation</h3>
+				<a class="icon spec" href="http://www.w3.org/TR/orientation-event/"></a>
 				<p>Some mobile devices can provide rotation data in all three axes through the browser. However, browser may handle the angles differently.</p>
 				<button class='start'>Start</button>
 				<button class='stop'>Stop</button>
@@ -73,6 +79,7 @@
 
 			<li id="acceleration">
 				<h3>Acceleration</h3>
+				<a class="icon spec" href="http://www.w3.org/TR/orientation-event/"></a>
 				<p>Measure your device acceleration in three axes. There even exist libraries to detect motion gestures like shaking by analysing this data.</p>
 				<button class='start'>Start</button>
 				<button class='stop'>Stop</button>
@@ -82,7 +89,8 @@
 
 			<li id="compass">
 				<h3>Compass</h3>
-				<p>Some mobile devices can provide rotation data through the browser. Put your device flat on a table and press start to see the compass in action. Some browsers may invert the rotation angles - this example uses angles like specified in the <a href="http://dev.w3.org/geo/api/spec-source-orientation.html">W3C Specification</a>.</p>
+				<a class="icon spec" href="http://www.w3.org/TR/orientation-event/"></a>
+				<p>Some mobile devices can provide rotation data through the browser. Put your device flat on a table and press start to see the compass in action. Some browsers may invert the rotation angles - this example uses angles like specified in the <a href="http://www.w3.org/TR/orientation-event/">W3C Specification</a>.</p>
 				<button class='start'>Start</button>
 				<button class='stop'>Stop</button>
 				<p class="result">-</p>
@@ -91,12 +99,15 @@
 
 			<li id="fullscreen">
 				<h3>Fullscreen</h3>
+				<a class="icon spec" href="https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html"></a>
 				<p>Display any HTML element in fullscreen mode.</p>
 				<button class='try'>Try</button>
 			</li>
 
 			<li id="sound-analysis">
 				<h3>Sound Analysis</h3>
+				<a class="icon spec" href="http://www.w3.org/TR/mediacapture-streams/"></a>
+				<a class="icon spec" href="http://www.w3.org/TR/webaudio/"></a>
 				<p>Analyse frequencies and the waveform of microphone input or sound files.</p>
 				<canvas width="500" height="100"></canvas>
 				<br>
@@ -106,6 +117,7 @@
 
 			<li id="video-analysis">
 				<h3>Video-Analysis</h3>
+				<a class="icon spec" href="http://www.w3.org/TR/mediacapture-streams/"></a>
 				<p>Use the webcam of your device and analyse its images. The border around the video indicates the average color of the video.</p>
 				<canvas></canvas>
 				<video autoplay></video>
@@ -116,12 +128,14 @@
 
 			<li id="midi">
 				<h3>Midi</h3>
+				<a class="icon spec" href="http://webaudio.github.io/web-midi-api/"></a>
 				<p>Play sound using the <a href="http://webaudio.github.io/web-midi-api/">Web MIDI API</a> (W3C Draft).</p>
 				<button class='try'>Try</button>
 			</li>
 
 			<li id="sound-generation">
 				<h3>Sound-Generation</h3>
+				<a class="icon spec" href="http://www.w3.org/TR/webaudio/"></a>
 				<p>With the WebAudio API you can create all sorts of sound effects on the fly, using oscillators, many filters and a lot more.</p>
 				<label>waveform: </label> 
 				<select class="waveshape">
@@ -144,6 +158,7 @@
 
 			<li id="geolocation">
 				<h3>Geolocation</h3>
+				<a class="icon spec" href="http://dev.w3.org/geo/api/spec-source.html"></a>
 				<p>Let your browser tell you where you are an where you're heading.</p>
 				<button class='try'>Try</button>
 				<p class="result"></p>

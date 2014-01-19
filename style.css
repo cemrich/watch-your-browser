@@ -46,11 +46,27 @@ button {
 }
 .features li h3 {
 	color: #2385bc;
+	display: inline-block;
+	margin-right: 0.25em;
 }
 .features li img {
 	width: 170px;
 	max-height: 140px;
 	float: left;
+}
+
+.icon:before {
+	display: inline-block;
+	color: black;
+	font-weight: bold;
+	font-size: 70%;
+	margin: 0 0.25em;
+}
+.icon:hover:before {
+	text-decoration: underline;
+}
+.spec:before {
+	content: 'w3c';
 }
 
 #battery .indicator {
