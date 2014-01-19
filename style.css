@@ -154,6 +154,15 @@ button {
 	max-width: 100%;
 }
 
+#sound-generation label {
+	display: block;
+	font-style: italic;
+}
+
+#sound-generation input {
+	width: 100%;
+}
+
 *|*:fullscreen {
 	position:fixed;
 	top:0; right:0; bottom:0; left:0;
