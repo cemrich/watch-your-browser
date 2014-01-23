@@ -3,6 +3,7 @@ define(function (require, exports, module) {
 	var getUserMedia = navigator.getUserMedia || 
 		navigator.webkitGetUserMedia || 
 		navigator.mozGetUserMedia;
+	window.URL = (window.URL || window.mozURL || window.webkitURL);
 
 	var canvas = document.querySelector('#video-analysis canvas');
 	var context = canvas.getContext('2d');
@@ -52,7 +53,7 @@ define(function (require, exports, module) {
 
 		getUserMedia.call(navigator, {video: true, audio: false}, function(stream) {
 			localStream = stream;
-			video.src = window.webkitURL.createObjectURL(stream);
+			video.src = window.URL.createObjectURL(stream);
 			running = true;
 			analyse();
 		}, microphoneError);
