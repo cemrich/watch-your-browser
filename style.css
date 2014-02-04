@@ -17,39 +17,39 @@ button {
 	list-style-position: outside;
 	padding: 0;
 }
-.features li {
+.features > li {
 	margin: 0 -1em;
 	padding: 1em;
 	border-top: 1px solid #cccccc;
 	clear: both;
 	border-left: 5px solid white;
 }
-.features li.supported {
+.features > li.supported {
 	border-left-color: green;
 }
-.features li:not(.supported) {
+.features > li:not(.supported) {
 	border-left-color: red;
 }
-.features li:not(.supported) button {
+.features > li:not(.supported) button {
 	pointer-events: none;
 	opacity: 0.5;
 }
-.features li.disabled {
+.features > li.disabled {
 	opacity: 0.4;
 	border-left-color: white;
 }
-.features li:nth-child(odd) {
+.features > li:nth-child(odd) {
 	background-color: #eeeeee;
 }
-.features li:nth-child(even) {
+.features > li:nth-child(even) {
 	background-color: #dddddd;
 }
-.features li h3 {
+.features > li h3 {
 	color: #2385bc;
 	display: inline-block;
 	margin-right: 0.25em;
 }
-.features li img {
+.features > li img {
 	width: 170px;
 	max-height: 140px;
 	float: left;
@@ -193,6 +193,24 @@ button {
 #context-menu {
 	/* not yet supported */
 	cursor: context-menu;
+}
+
+#drag-and-drop.over {
+	background-color: #B5EB92;
+}
+#drag-and-drop .output {
+	padding-left: 0;
+	list-style-type: none;
+}
+#drag-and-drop .output > li {
+	margin: 0.7em 0;
+}
+#drag-and-drop .output > li > span {
+	background-color: white;
+	display: block;
+	width: 100%;
+	color: #2385BC;
+	padding: 0.2em 0.4em;
 }
 
 *|*:fullscreen {
