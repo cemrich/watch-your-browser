@@ -190,6 +190,11 @@ button {
 	margin-bottom: 1em;
 }
 
+#context-menu {
+	/* not yet supported */
+	cursor: context-menu;
+}
+
 *|*:fullscreen {
 	position:fixed;
 	top:0; right:0; bottom:0; left:0;
