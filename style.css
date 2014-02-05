@@ -12,6 +12,15 @@ button {
 	font-weight: bold;
 	padding: 0.2em 0.7em;
 }
+a {
+	color: #2385BC;
+}
+a:visited {
+	color: #0F257E;
+}
+a:hover {
+	color: #316B8B;
+}
 .features {
 	list-style-type: none;
 	list-style-position: outside;
