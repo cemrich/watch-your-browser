@@ -105,7 +105,7 @@ a:hover {
 }
 #battery .time {
 	height: 100px;
-	margin-left: 100px; 
+	margin-left: 100px;
 }
 #battery .time .chargedTime,
 #battery .time .dischargedTime {
@@ -220,6 +220,19 @@ a:hover {
 	width: 100%;
 	color: #2385BC;
 	padding: 0.2em 0.4em;
+}
+
+#offline-detection .indicator:before {
+	display: inline-block;
+	content: "offline";
+	padding: 0.5em;
+	background-color: red;
+	text-align: center;
+}
+
+#offline-detection .indicator.online:before {
+	content: "online";
+	background-color: green;
 }
 
 *|*:fullscreen {
