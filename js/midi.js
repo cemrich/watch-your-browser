@@ -7,12 +7,17 @@ define(function (require, exports, module) {
 	// MIDI
 	exports.onTryClick = function() {
 		navigator.requestMIDIAccess().then(function (access) {
-			var outputs = access.outputs();
-			var o = access.outputs()[0];
+			var output = access.outputs.get(0);
+
+			if (typeof(output) == 'undefined') {
+				alert('no midi outputs detected');
+				return;
+			}
+
 			// full velocity note on A4 on channel zero:
-			o.send( [ 0x90, 0x45, 0x7f ] ); 
+			output.send( [ 0x90, 0x45, 0x7f ] );
 			// full velocity A4 note off in one second:
-			o.send( [ 0x80, 0x45, 0x7f ], window.performance.now() + 1000 );
+			output.send( [ 0x80, 0x45, 0x7f ], window.performance.now() + 1000 );
 		}, function (error) {
 			alert('not supported', error);
 		});
