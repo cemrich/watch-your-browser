@@ -12,7 +12,7 @@ define(function (require, exports, module) {
 			result.innerHTML += i + ': ' + position.coords[i] + '<br>';
 		}
 	}
-	
+
 	exports.onTryClick = function() {
 		result.innerHTML = 'please wait...';
 		var watchID = navigator.geolocation.watchPosition(updateLocation, function () {

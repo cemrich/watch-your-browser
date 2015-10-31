@@ -11,7 +11,7 @@ define(function (require, exports, module) {
 			counter++;
 			var notification = new Notification(
 				'Notification Title ' + counter, {
-				icon: 'img/ps_bg_middle.jpg', 
+				icon: 'img/ps_bg_middle.jpg',
 				body: 'Notification content...' });
 			if (counter >= 3) {
 				clearInterval(interval);

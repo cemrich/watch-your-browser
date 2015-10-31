@@ -1,10 +1,10 @@
 define(function (require, exports, module) {
 
-	var AudioContext = window.AudioContext || 
-		window.webkitAudioContext || 
+	var AudioContext = window.AudioContext ||
+		window.webkitAudioContext ||
 		window.mozAudioContext;
-	var getUserMedia = navigator.getUserMedia || 
-		navigator.webkitGetUserMedia || 
+	var getUserMedia = navigator.getUserMedia ||
+		navigator.webkitGetUserMedia ||
 		navigator.mozGetUserMedia;
 
 	var canvas = document.querySelector('#sound-analysis canvas');

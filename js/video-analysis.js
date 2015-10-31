@@ -1,7 +1,7 @@
 define(function (require, exports, module) {
 
-	var getUserMedia = navigator.getUserMedia || 
-		navigator.webkitGetUserMedia || 
+	var getUserMedia = navigator.getUserMedia ||
+		navigator.webkitGetUserMedia ||
 		navigator.mozGetUserMedia;
 	window.URL = (window.URL || window.mozURL || window.webkitURL);
 
