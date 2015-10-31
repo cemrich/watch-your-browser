@@ -53,8 +53,8 @@ define(function (require, exports, module) {
 			}
 		}
 
-		for (var i = 0; i < files.length; i++) {
-			file = files.item(i);
+		for (var j = 0; j < files.length; j++) {
+			file = files.item(j);
 			item = '<li><span>file';
 			if (file.type) {
 				item += ' (' + file.type + ')';

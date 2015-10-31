@@ -45,7 +45,7 @@ define(function (require, exports, module) {
 
 	function microphoneError() {
 		alert('could not connect to camera');
-	};
+	}
 
 	// VIDEO ANALYSIS
 	exports.onStartClick = function() {

@@ -14,7 +14,7 @@ define(function (require, exports, module) {
 			var resultList = '';
 			for (var i = 0; i < event.results.length; i++) {
 				resultList += event.results.item(i)[0].transcript + '<br>';
-			};
+			}
 			result.innerHTML = resultList;
 			recognition.stop();
 		});

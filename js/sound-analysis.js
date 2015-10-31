@@ -28,15 +28,17 @@ define(function (require, exports, module) {
 			analyse(analyser);
 		});
 
+		var x, y, i;
+		var width = canvas.width;
 		var buffer = new Uint8Array(analyser.frequencyBinCount);
 		analyser.getByteFrequencyData(buffer);
 		context.clearRect(0, 0, canvas.width, canvas.height);
 		context.strokeStyle = '#2385BC';
 
 		context.beginPath();
-		for (var x = 0, l = canvas.width; x < l; x++) {
-			var i = Math.floor(x / l * analyser.frequencyBinCount);
-			var y = buffer[i] / 256 * canvas.height;
+		for (x = 0; x < width; x++) {
+			i = Math.floor(x / width * analyser.frequencyBinCount);
+			y = buffer[i] / 256 * canvas.height;
 			context.moveTo(x, canvas.height);
 			context.lineTo(x, canvas.height - y);
 		}
@@ -47,9 +49,9 @@ define(function (require, exports, module) {
 
 		context.beginPath();
 		context.moveTo(0, canvas.height / 2);
-		for (var x = 0, l = canvas.width; x < l; x++) {
-			var i = Math.floor(x / l * analyser.frequencyBinCount);
-			var y = buffer[i] / 256 * canvas.height;
+		for (x = 0; x < width; x++) {
+			i = Math.floor(x / width * analyser.frequencyBinCount);
+			y = buffer[i] / 256 * canvas.height;
 			context.lineTo(x, canvas.height - y);
 		}
 		context.stroke();
@@ -57,7 +59,7 @@ define(function (require, exports, module) {
 
 	function microphoneError() {
 		alert('could not connect to microphone');
-	};
+	}
 
 	// SOUND ANALYSIS
 	exports.onStartClick = function() {
