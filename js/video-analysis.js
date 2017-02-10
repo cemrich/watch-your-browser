@@ -1,8 +1,5 @@
 define(function (require, exports, module) {
 
-	var getUserMedia = navigator.getUserMedia ||
-		navigator.webkitGetUserMedia ||
-		navigator.mozGetUserMedia;
 	window.URL = (window.URL || window.mozURL || window.webkitURL);
 
 	var canvas = document.querySelector('#video-analysis canvas');
@@ -13,7 +10,7 @@ define(function (require, exports, module) {
 
 
 	exports.isSupported = function () {
-		return getUserMedia;
+		return navigator.mediaDevices.getUserMedia;
 	};
 
 
@@ -43,7 +40,7 @@ define(function (require, exports, module) {
 		video.style.backgroundColor = rgb;
 	}
 
-	function microphoneError() {
+	function cameraError() {
 		alert('could not connect to camera');
 	}
 
@@ -51,17 +48,22 @@ define(function (require, exports, module) {
 	exports.onStartClick = function() {
 		running = false;
 
-		getUserMedia.call(navigator, {video: true, audio: false}, function(stream) {
-			localStream = stream;
-			video.src = window.URL.createObjectURL(stream);
-			running = true;
-			analyse();
-		}, microphoneError);
+		navigator.mediaDevices.getUserMedia({video: true, audio: false})
+			.then(function(stream) {
+				localStream = stream;
+				video.srcObject = stream;
+				video.onloadedmetadata = function(e) {
+					running = true;
+					video.play();
+					analyse();
+				};
+			})
+			.catch(cameraError);
 	};
 
 	exports.onStopClick = function() {
 		if (localStream) {
-			localStream.stop();
+			localStream.getTracks()[0].stop();
 			localStream = null;
 		}
 		running = false;
