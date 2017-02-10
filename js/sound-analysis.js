@@ -3,9 +3,6 @@ define(function (require, exports, module) {
 	var AudioContext = window.AudioContext ||
 		window.webkitAudioContext ||
 		window.mozAudioContext;
-	var getUserMedia = navigator.getUserMedia ||
-		navigator.webkitGetUserMedia ||
-		navigator.mozGetUserMedia;
 
 	var canvas = document.querySelector('#sound-analysis canvas');
 	var context = canvas.getContext('2d');
@@ -16,7 +13,7 @@ define(function (require, exports, module) {
 
 
 	exports.isSupported = function () {
-		return getUserMedia && AudioContext.prototype.createAnalyser;
+		return navigator.mediaDevices.getUserMedia && AudioContext.prototype.createAnalyser;
 	};
 
 
@@ -67,19 +64,22 @@ define(function (require, exports, module) {
 		var audioContext = new AudioContext();
 		analyser = audioContext.createAnalyser();
 
-		getUserMedia.call(navigator, {audio: true}, function(stream) {
-			source = audioContext.createMediaStreamSource(stream);
-			localStream = stream;
-			source.connect(analyser);
-			running = true;
-			analyse(analyser);
-		}, microphoneError);
+		navigator.mediaDevices.getUserMedia({audio: true})
+			.then(function(stream) {
+				console.log("connected");
+				source = audioContext.createMediaStreamSource(stream);
+				localStream = stream;
+				source.connect(analyser);
+				running = true;
+				analyse(analyser);
+			})
+			.catch(microphoneError);
 	};
 
 	exports.onStopClick = function() {
 		if (localStream) {
 			source.disconnect(analyser);
-			localStream.stop();
+			localStream.getTracks()[0].stop();
 			localStream = null;
 		}
 		running = false;
