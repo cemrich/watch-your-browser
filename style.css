@@ -238,6 +238,17 @@ a:hover {
 	background-color: green;
 }
 
+#ambient-light .result {
+	background-color: yellow;
+	margin-bottom: 0;
+	max-width: 100%;
+	padding: 0.2em 0.4em;
+}
+#ambient-light .result:before {
+	content: "☼";
+	margin-right: 0.2em;
+}
+
 *|*:fullscreen {
 	position:fixed;
 	top:0; right:0; bottom:0; left:0;
