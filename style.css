@@ -238,6 +238,7 @@ a:hover {
 	background-color: green;
 }
 
+#proximity-sensor .result,
 #ambient-light .result {
 	background-color: yellow;
 	margin-bottom: 0;
@@ -246,6 +247,10 @@ a:hover {
 }
 #ambient-light .result:before {
 	content: "☼";
+	margin-right: 0.2em;
+}
+#proximity-sensor .result:before {
+	content: "◩";
 	margin-right: 0.2em;
 }
 
