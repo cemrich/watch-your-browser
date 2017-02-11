@@ -36,6 +36,7 @@
 			<li id="notifications">
 				<h3>Notifications</h3>
 				<a class="icon spec" href="http://www.w3.org/TR/notifications/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=notifications"></a>
 				<p>After your approval some browsers might show you notifications above your task bar.</p>
 				<button class='try'>Try</button>
 			</li>
@@ -43,6 +44,7 @@
 			<li id="vibration">
 				<h3>Vibration</h3>
 				<a class="icon spec" href="http://www.w3.org/TR/vibration/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=vibration"></a>
 				<p>Yes, your phone might vibrate. Desktop browser might provide the API, but - surprise - won't vibrate.</p>
 				<button class='try'>Try</button>
 			</li>
@@ -50,6 +52,7 @@
 			<li id="battery">
 				<h3>Battery</h3>
 				<a class="icon spec" href="http://www.w3.org/TR/battery-status/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=battery-status"></a>
 				<p>Firefox and Chrome can detect your battery status. Try to plug your device in and out to see the changes.</p>
 				<div class="indicator">
 					<div class="inner">no support</div>
@@ -63,6 +66,7 @@
 			<li id="speech-recognition">
 				<h3>Speech-Recognition</h3>
 				<a class="icon spec" href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=speech-recognition"></a>
 				<p>Chrome can do speech recognition inside the browser after the user has allowed to use the microphone.</p>
 				<button class='try'>Try</button>
 				<p class="result"></p>
@@ -71,6 +75,7 @@
 			<li id="speech-synthesis">
 				<h3>Speech-Synthesis</h3>
 				<a class="icon spec" href="https://dvcs.w3.org/hg/speech-api/raw-file/tip/speechapi.html"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=speech-synthesis"></a>
 				<p>Few browser are able to synthesize text to speech and read it out to you.</p>
 				<input type="text" value="Hello, how are you?">
 				<button class='try'>Try</button>
@@ -79,6 +84,7 @@
 			<li id="rotation">
 				<h3>Rotation</h3>
 				<a class="icon spec" href="http://www.w3.org/TR/orientation-event/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=deviceorientation"></a>
 				<p>Some mobile devices can provide rotation data in all three axes through the browser. However, browser may handle the angles differently.</p>
 				<button class='start'>Start</button>
 				<button class='stop'>Stop</button>
@@ -89,6 +95,7 @@
 			<li id="acceleration">
 				<h3>Acceleration</h3>
 				<a class="icon spec" href="http://www.w3.org/TR/orientation-event/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=deviceorientation"></a>
 				<p>Measure your device acceleration in three axes. There even exist libraries to detect motion gestures like shaking by analysing this data.</p>
 				<button class='start'>Start</button>
 				<button class='stop'>Stop</button>
@@ -99,6 +106,7 @@
 			<li id="compass">
 				<h3>Compass</h3>
 				<a class="icon spec" href="http://www.w3.org/TR/orientation-event/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=deviceorientation"></a>
 				<p>Some mobile devices can provide rotation data through the browser. Put your device flat on a table and press start to see the compass in action. Some browsers may invert the rotation angles - this example uses angles like specified in the <a href="http://www.w3.org/TR/orientation-event/">W3C Specification</a>.</p>
 				<button class='start'>Start</button>
 				<button class='stop'>Stop</button>
@@ -109,6 +117,7 @@
 			<li id="fullscreen">
 				<h3>Fullscreen</h3>
 				<a class="icon spec" href="https://dvcs.w3.org/hg/fullscreen/raw-file/tip/Overview.html"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=fullscreen"></a>
 				<p>Display any HTML element in fullscreen mode.</p>
 				<button class='try'>Try</button>
 			</li>
@@ -117,6 +126,8 @@
 				<h3>Sound Analysis</h3>
 				<a class="icon spec" href="http://www.w3.org/TR/mediacapture-streams/"></a>
 				<a class="icon spec" href="http://www.w3.org/TR/webaudio/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=stream"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=audio-api"></a>
 				<p>Analyse frequencies and the waveform of microphone input or sound files.</p>
 				<canvas width="500" height="100"></canvas>
 				<br>
@@ -127,6 +138,7 @@
 			<li id="video-analysis">
 				<h3>Video-Analysis</h3>
 				<a class="icon spec" href="http://www.w3.org/TR/mediacapture-streams/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=audio-api"></a>
 				<p>Use the webcam of your device and analyse its images. The border around the video indicates the average color of the video.</p>
 				<canvas></canvas>
 				<video autoplay></video>
@@ -138,6 +150,7 @@
 			<li id="midi">
 				<h3>Midi</h3>
 				<a class="icon spec" href="http://webaudio.github.io/web-midi-api/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=midi"></a>
 				<p>Play sound using the <a href="http://webaudio.github.io/web-midi-api/">Web MIDI API</a> (W3C Draft).</p>
 				<button class='try'>Try</button>
 			</li>
@@ -145,6 +158,7 @@
 			<li id="sound-generation">
 				<h3>Sound-Generation</h3>
 				<a class="icon spec" href="http://www.w3.org/TR/webaudio/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=audio-api"></a>
 				<p>With the WebAudio API you can create all sorts of sound effects on the fly, using oscillators, many filters and a lot more.</p>
 				<label>waveform: </label>
 				<select class="waveshape">
@@ -168,6 +182,7 @@
 			<li id="geolocation">
 				<h3>Geolocation</h3>
 				<a class="icon spec" href="http://dev.w3.org/geo/api/spec-source.html"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=geolocation"></a>
 				<p>Let your browser tell you where you are an where you're heading.</p>
 				<button class='try'>Try</button>
 				<p class="result"></p>
@@ -176,6 +191,7 @@
 			<li id="pointer-lock">
 				<h3>Pointer Lock</h3>
 				<a class="icon spec" href="http://www.w3.org/TR/pointerlock/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=pointerlock"></a>
 				<p>This API can capture your mouse pointer like used in many video games. Press ESC to exit the capture mode.</p>
 				<div class="panorama"></div>
 				<small>image from <a href="https://de.wikipedia.org/wiki/Datei:360%C2%B0_Panorama_Zitterklapfen.jpg">Wikipedia</a> by <a href="https://commons.wikimedia.org/wiki/User:B%C3%B6hringer">böhringer friedrich</a></small>
@@ -185,6 +201,7 @@
 			<li id="context-menu" contextmenu="mymenu">
 				<h3>Context Menu</h3>
 				<a class="icon spec" href="http://www.whatwg.org/specs/web-apps/current-work/multipage/interactive-elements.html#context-menus"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=menu"></a>
 				<p>Do a right click on this item to see some additional items in your context menu. The specification allows a lot more than this example is showing, but browsers are not supporting these features at the moment.</p>
 				<menu type="context" id="mymenu">
 					<menuitem label="first item" onclick="alert('first item clicked')"
@@ -203,6 +220,7 @@
 			<li id="drag-and-drop">
 				<h3>Drag & Drop</h3>
 				<a class="icon spec" href="http://www.w3.org/TR/2010/WD-html5-20101019/dnd.html"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=dragndrop"></a>
 				<p>Drag things into this field. You can drag & drop files, text or html items. Different browsers may display different attributes and mime-types.</p>
 				<ul class="output"></ul>
 			</li>
@@ -210,6 +228,7 @@
 			<li id="offline-detection">
 				<h3>Offline Detection</h3>
 				<a class="icon spec" href="http://dev.w3.org/html5/spec-preview/offline.html#browser-state"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=online-status"></a>
 				<p>Detects if your device is connected to the internet. Some browsers may respont to their "work offline" menu items only.</p>
 				<div class="indicator"></div>
 			</li>
@@ -217,6 +236,7 @@
 			<li id="screen-orientation">
 				<h3>Screen Orientation</h3>
 				<a class="icon spec" href="https://w3c.github.io/screen-orientation/"></a>
+				<a class="icon caniuse" href="http://caniuse.com/#feat=screen-orientation"></a>
 				<p>Get information about the screen orientation (portrait/landscape) of your device. You can even lock the orientation (may need fullscreen access).</p>
 				<button class='start'>Lock to landscape</button>
 				<button class='stop'>Unlock</button>
