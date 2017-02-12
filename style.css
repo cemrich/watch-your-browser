@@ -75,10 +75,10 @@ a:hover {
 	text-decoration: underline;
 }
 .spec:before {
-	content: 'w3c';
+	content: 'spec';
 }
 .caniuse:before {
-	content: 'caniuse';
+	content: 'support';
 }
 
 #battery .indicator {
