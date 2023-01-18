@@ -1,9 +1,5 @@
 define(function (require, exports, module) {
 
-	var AudioContext = window.AudioContext ||
-		window.webkitAudioContext ||
-		window.mozAudioContext;
-
 	var canvas = document.querySelector('#sound-analysis canvas');
 	var context = canvas.getContext('2d');
 	var running = false;
