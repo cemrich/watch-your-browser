@@ -1,9 +1,5 @@
 define(function (require, exports, module) {
 
-	var AudioContext = window.AudioContext ||
-		window.webkitAudioContext ||
-		window.mozAudioContext;
-
 	var volumeSlider = document.querySelector('#sound-generation .volume');
 	var volumeLabel = document.querySelector('#sound-generation #volume');
 	var frequencySlider = document.querySelector('#sound-generation .frequency');
