@@ -3,16 +3,6 @@ define(function (require, exports, module) {
 	var rootItem = document.querySelector('#screen-orientation');
 	var result = rootItem.querySelector('.result');
 
-	rootItem.requestFullscreen = rootItem.webkitRequestFullscreen ||
-		rootItem.mozRequestFullScreen ||
-		rootItem.msRequestFullscreen ||
-		rootItem.requestFullscreen;
-
-	document.exitFullscreen = document.webkitExitFullscreen ||
-		document.mozCancelFullScreen ||
-		document.msExitFullscreen ||
-		document.exitFullscreen;
-
 	exports.isSupported = function () {
 		return rootItem.requestFullscreen &&
 			typeof(screen) !== 'undefined' &&
@@ -28,9 +18,6 @@ define(function (require, exports, module) {
 		screen.orientation.lock('landscape');
 
 		// remove listeners
-		document.removeEventListener('webkitfullscreenchange', lockScreen, false);
-		document.removeEventListener('mozfullscreenchange', lockScreen, false);
-		document.removeEventListener('MSFullscreenChange', lockScreen, false);
 		document.removeEventListener('fullscreenchange', lockScreen, false);
 	}
 
@@ -42,9 +29,6 @@ define(function (require, exports, module) {
 
 	exports.onStartClick = function() {
 		// lock screen when we go fullscreen
-		document.addEventListener('webkitfullscreenchange', lockScreen, false);
-		document.addEventListener('mozfullscreenchange', lockScreen, false);
-		document.addEventListener('MSFullscreenChange', lockScreen, false);
 		document.addEventListener('fullscreenchange', lockScreen, false);
 
 		rootItem.requestFullscreen();
