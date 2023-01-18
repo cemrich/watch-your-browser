@@ -57,6 +57,7 @@ a:hover {
 	color: #2385bc;
 	display: inline-block;
 	margin-right: 0.25em;
+	margin-bottom: 0;
 }
 .features > li img {
 	width: 170px;
