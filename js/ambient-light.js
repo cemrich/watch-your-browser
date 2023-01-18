@@ -1,24 +1,29 @@
 define(function (require, exports, module) {
 
 	exports.isSupported = function () {
-		return 'ondevicelight' in window;
+		return 'AmbientLightSensor' in window;
 	};
 
+	const result = document.querySelector('#ambient-light .result');
+	var sensor = null;
 
-	var result = document.querySelector('#ambient-light .result');
+	function ondevicelight() {
+		result.innerHTML = `${sensor.illuminance} lux`;
+	}
 
-	function ondevicelight(event) {
-		result.innerHTML = event.value;
-		var percent = event.value / 1000;
-		result.style.width = (percent * 100) + '%';
+	function onError(event) {
+		result.innerHTML = `${event.error.name}: ${event.error.message}`;
 	}
 
 	exports.onStartClick = function() {
-		window.addEventListener('devicelight', ondevicelight, false);
+		sensor = sensor || new AmbientLightSensor();
+		sensor.addEventListener('reading', ondevicelight, false);
+		sensor.addEventListener('error', onError, false);
 	};
 
 	exports.onStopClick = function() {
-		window.removeEventListener('devicelight', ondevicelight, false);
+		sensor.removeEventListener('reading', ondevicelight, false);
+		sensor.removeEventListener('error', onError, false);
 	};
 
 });
