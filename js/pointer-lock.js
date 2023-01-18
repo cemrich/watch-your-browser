@@ -5,24 +5,16 @@ define(function (require, exports, module) {
 	var panoramaPositionX = 0;
 	movePanorama(0);
 
-	lockNode.requestPointerLock = lockNode.requestPointerLock ||
-		 lockNode.mozRequestPointerLock ||
-		 lockNode.webkitRequestPointerLock;
-
 	exports.isSupported = function () {
 		return lockNode.requestPointerLock;
 	};
 
 	if (exports.isSupported) {
 		document.addEventListener('pointerlockchange', lockChangeCallback, false);
-		document.addEventListener('mozpointerlockchange', lockChangeCallback, false);
-		document.addEventListener('webkitpointerlockchange', lockChangeCallback, false);
 	}
 
 	function lockChangeCallback() {
-		if (document.pointerLockElement === lockNode ||
-			document.mozPointerLockElement === lockNode ||
-			document.webkitPointerLockElement === lockNode) {
+		if (document.pointerLockElement) {
 			// locked
 			document.addEventListener('mousemove', mouseMoveCallback, false);
 		} else {
@@ -32,9 +24,7 @@ define(function (require, exports, module) {
 	}
 
 	function mouseMoveCallback(e) {
-		var movementX = e.movementX || e.mozMovementX || e.webkitMovementX || 0;
-		var movementY = e.movementY || e.mozMovementY || e.webkitMovementY || 0;
-		movePanorama(-movementX);
+		movePanorama(e.movementX);
 	}
 
 	function movePanorama(amount) {
