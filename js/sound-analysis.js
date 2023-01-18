@@ -13,7 +13,7 @@ define(function (require, exports, module) {
 
 
 	exports.isSupported = function () {
-		return navigator.mediaDevices.getUserMedia && AudioContext.prototype.createAnalyser;
+		return navigator.mediaDevices?.getUserMedia && AudioContext.prototype.createAnalyser;
 	};
 
 

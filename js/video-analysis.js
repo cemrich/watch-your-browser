@@ -10,7 +10,7 @@ define(function (require, exports, module) {
 
 
 	exports.isSupported = function () {
-		return navigator.mediaDevices.getUserMedia;
+		return navigator.mediaDevices?.getUserMedia;
 	};
 
 
